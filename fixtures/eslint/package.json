@@ -3,10 +3,14 @@
   "name": "eslint-playground",
   "dependencies": {
     "eslint": "4.1.0",
-    "eslint-plugin-react-hooks": "link:./proxy"
+    "eslint-plugin-react-hooks": "link:./proxy",
+    "snyk": "^1.189.0"
   },
   "scripts": {
     "start": "./watch.sh",
-    "lint": "eslint index.js"
-  }
+    "lint": "eslint index.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
